@@ -5,6 +5,7 @@ function App() {
   const [Weather, setWeather] = useState('');
   const [Search, setSearch] = useState('');
   const [DateTime, setDateTime] = useState('');
+  const [Error, setError] = useState('');
 
   // Date & Time
   var dateTime = {
@@ -30,7 +31,15 @@ function App() {
       // Fetch
       fetch(`${url}/weather?q=${Search}&units=imperial&appid=${api}`)
         .then(res => res.json())
+        .then(res => {
+          if(res.cod === "404"){
+            throw Error;
+          }else{
+            return res;
+          }
+        })
         .then(res => setWeather(res))
+        .catch(() => setError("Please check your input..."))
     }
   }
 
@@ -68,7 +77,7 @@ function App() {
               </div>
             ) : (
               <div>
-                <p class="error">Please check your input...</p>
+                <p className="error">{Error}</p>
               </div>
             )
           }
