@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff5c0;
+}
+.app .container{
+  max-width: 500px;
+  background: #ff4646;
+  margin: 40px auto;
+  padding: 25px;
+  box-shadow: 11px 11px 0px #fff, 11px 11px 15px #ccc;
+}
+.container input{
+  width: 100%;
+  border:0px;
+  padding:15px;
+  font-size: 20px;
+}
+.container input:focus{
+  border: 0;
+  outline: 0;
+}
+.container h1{
+  letter-spacing: 0.01em;
+  font-size:35px;
+  color: #fff;
+  text-shadow: 4px 4px 0px #df2d2d;
+}
+.container h1 span{
+  background: #fff;
+  color: #ff4646;
+  padding: 5px 10px;
+  font-size:30px;
+  box-shadow: 8px 8px 0px #df2d2d;
+  text-shadow: none;
+}
+.container h2{
+  color: #fff;
+  text-shadow: 2px 2px 0px #df2d2d;
+  font-weight: normal;
+  font-size: 18px;
+  font-style: italic;
+}
+.container .weather{
+  color: #fff;
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 4px 4px 0px #df2d2d;
+  margin-bottom: 5px;
+}
+.weather sup{
+  font-size: 50px;
+}
+.weather b{
+  font-size: 40px;
+}
+.container .feel{
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 4px 4px 0px #df2d2d;
+  background: #df2d2d;
+  display: inline-block;
+  padding: 5px 8px;
+}
+.container .others{
+  font-size: 18px;
+  color: #992222;
+  font-weight: bold;
+}
+.container .error{
+  color: #fff;
+  font-size: 25px;
+  margin-top: 30px;
+  text-shadow: 2px 2px 0px #df2d2d;
+} 
